@@ -46,18 +46,36 @@
     
             highlight: function(element, errorClass) {
                 var comp = $(element.parentElement);
+                var $el = $(element);
+                var anchor = $el;
                 
                 comp.addClass("ValidationFailed");
                 comp.find("div[id$='-tip']").show();
+                
+                if ($el.attr("type") == "checkbox")
+                    anchor = $el.parent();
+                
+                $("#" + $el.attr("id") + "-tip")
+                    .css("left", anchor.position().left + anchor.outerWidth())
+                    .css("top", anchor.position().top)
             },
     
             unhighlight: function(element, errorClass) {
                 var comp = $(element.parentElement);
+                var anchor = $el;
                 
                 comp.removeClass("ValidationFailed");
                 comp.find("div[id$='-tip']").hide();
+                
+                if ($el.attr("type") == "checkbox")
+                    anchor = $el.parent();
+                
+                $("#" + $el.attr("id") + "-tip")
+                    .css("left", anchor.position().left + anchor.outerWidth())
+                    .css("top", anchor.position().top)
             },
     
+    		
             messages: {
                 "post[videoUrl]": {
 	            	required: "Ce champs est obligatoire",
