@@ -23,11 +23,16 @@
 		
 		// animate submit button
 	    $(".form-std .Control input[type='submit']").click(function() {
-	        var bposx = $(this).css("background-position-x");
+	        var bgp = $(this).css("background-position").split(" ");
+	        var posx = bgp[0];
 	        
-	        if (bposx) {
-	            var pos = parseInt( bposx.replace("px", ""));
-	            $(this).css("background-position-x", (pos + 93) + "px")
+	        if (posx) {
+	            var x = parseInt(posx.replace("px", ""));
+
+	            bgp[0] = (x + 93) + "px";
+	            
+//	            $(this).css("background-position", bgp.join(" "))
+	            //$(this).attr("data-posx", x + 93);
 	        }
 	    })
 	    
@@ -62,6 +67,7 @@
     
             unhighlight: function(element, errorClass) {
                 var comp = $(element.parentElement);
+                var $el = $(element);
                 var anchor = $el;
                 
                 comp.removeClass("ValidationFailed");
