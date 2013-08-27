@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Tigerlily | Exercice Formulaire</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+		<div class="ctnr">
+			<div class="side">
+				<div class="list-group" id="acc">
+				  <a href="#" class="list-group-item">Utilisateur</a>
+				  <a class="list-group-item not-collapsed" data-toggle="collapse" data-parent="#acco" href="#g1">
+				  	Contenu
+				  	<span class="glyphicon"></span>
+				  </a>
+				  <div class="list-group-collapse collapse in" id="g1">
+				    <a href="#" class="list-group-item">Formulaires</a>
+				    <a class="list-group-item active">Videos</a>
+				  </div>
+				  <a href="#" class="list-group-item">Themes</a>
+				  <a href="#" class="list-group-item">Statistiques</a>
+				  <a class="list-group-item collapsed" data-toggle="collapse" data-parent="#acco" href="#g2">
+				  	Parametres
+				  	<span class="glyphicon"></span>
+				  </a>
+				  <div class="list-group list-group-collapse collapse" id="g2">
+					<a href="#" class="list-group-item">Compte</a>
+					<a href="#" class="list-group-item">Securite</a>
+				  </div>
+				  <a href="#" class="list-group-item">Instants Gagnants</a>
+				</div>				
+			</div>
+			<div class="content">
+				<div class="section">
+					<span class="title">Concours</span> <span class="subtitle">sur 2 pages</span>
+				</div>
+				<form class="form-std" id="edit_form" method="post" action="">
+		  	      <div class="title">Modifier la Video de Romain Dopint</div>
+				  <fieldset>
+				    <p class="form-comp SingleLineText">
+				      <label for="post_videoUrl" class="Label" data-text="video"></label>
+				      <input id="post_videoUrl" name="post[videoUrl]" type="url" class="urlField" required autofocus/>
+				    </p>
+				    <p class="form-comp TextArea">
+				      <label for="post_comment" class="Label" data-text="postMessage"></label>
+				      <textarea id="post_comment" name="post[comment]" required maxlength=250></textarea>
+				      <span id='comLength'></span>
+				    </p>
+				    <p class="form-comp SingleLineText">
+				      <label for="post_uEmail" class="Label" data-text="email"></label>
+				      <input id="post_uEmail" name="post[uEmail]" type="email" required/>
+				    </p>
+				    <p></p>
+				    <p class="form-comp MultipleChoice">
+				      <input id="choice1" type="checkbox" name="post[cgu]" value="true" class="choice" required/>
+				      <label for="choice1" class="choiceLabel">C.G.U.</label>
+				    </p>
+				    <p class="form-comp MultipleChoice">
+				      <input id="choice2" type="checkbox" name="newslatter" value="true" class="choice"/>
+				      <label for="choice2" class="choiceLabel" data-text="newsletter"></label>
+				    </p>
+				  </fieldset>
+				  <p class="Control">
+				    <input class="submit" type="submit" value=""/>
+				  </p>
+				</form>
+	        </div>
+	    </div>
+		    
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/vendor/jquery.validate.js"></script>
+        <script src="js/vendor/jquery-placeholder/jquery.placeholder.js"></script>
+        <script src="js/vendor/bootstrap.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        
+    </body>
+</html>

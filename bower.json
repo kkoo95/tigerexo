@@ -1,0 +1,16 @@
+{
+  "name": "tiger",
+  "version": "0.0.0",
+  "main": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-placeholder": "~2.0.7",
+    "bootstrap": "~3.0.0"
+  }
+}

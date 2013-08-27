@@ -1,0 +1,282 @@
+body {
+	background: #eee;
+	font-family: "Lucida Grande", sans-serif;
+}
+
+.ctnr {
+	margin: 60px auto 5px auto;
+	width: 970px;
+}
+
+.col {
+	float: left;
+}
+
+.menu {
+	width: 120px;
+}
+
+.side {
+    width: 200px;
+    float: left;
+    height: 100%;
+    margin-top: 3em;
+}
+
+.content {
+	width: 70%;
+	margin-left: 230px;
+}
+
+.section {
+	margin-bottom: 0px;
+	line-height: 3em;
+	font-weight: bold;
+}
+
+.section .title {
+	font-size: 1.5em;
+}
+
+.section .subtitle {
+	font-size: 1em;
+	color: #999;
+}
+
+.form-std {
+	width: 600px;
+	background-color: #fff;
+}
+
+.form-std .title, .section {
+	font-family: Helvetica;
+	color: #222;
+}
+
+.form-std .title {
+	padding: 10px 20px;
+	border-bottom: 1px solid #999;
+	font-size: 19px;
+	font-weight: bold;
+}
+
+.lt-ie9 .urlField {
+	line-height: 100%;
+}
+
+.urlField {
+	
+}
+
+.not-collapsed > .glyphicon:before {
+    content: "\e114";
+}
+
+.collapsed > .glyphicon:before {
+    content: "\e080";
+}
+
+.list-group-collapse {
+	margin-bottom: 0px;
+}
+
+.list-group-collapse > .list-group-item {
+	text-indent: 20px;
+}
+
+.list-group-item > .glyphicon {
+	float: right;	
+}
+
+text-area,input,.preUrl {
+	font-size: 13px;
+}
+
+#comLength {
+	font-size: 0.8em;
+}
+
+.preUrl {
+	position: relative;
+	color: #999;
+}
+
+.placeholder {
+	color: #aaa;
+}
+
+/* Form */
+.form-std {
+	line-height: 1.5em;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.form-std fieldset {
+	padding: 10px;
+}
+
+/* Control */
+.form-std .Control {
+	padding: 1em 1.5em 1em 0;
+	list-style: none;
+	overflow: hidden;
+	text-align: right;
+	margin: 1em 0em 0 0;
+	position: relative;
+	border-top: 1px solid #999;
+}
+
+.form-std .Control input[type="submit"] {
+	line-height: 0;
+	margin: 0;
+	background: transparent url(../img/save_button0.png) repeat scroll center center;
+	border: 1px none;
+	border-color: #21A700;
+	padding: 0;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+	border-radius: 2px;
+	width: 79px;
+	height: 23px;
+	transition-property: background-position-x, background-position-y;
+	transition-duration: 0.20s;
+	background-position-x: -7px;
+}
+
+.form-std .Control input[type="submit"]:hover {
+	background-position-y: 30px;
+	border-color: #2C8AEF;
+}
+
+.form-std .Control input[type="submit"]:active {
+	border-color: #7FBCFF;
+}
+
+/* Tips */
+.form-std .Tip {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	max-width: 400px;
+	font-family: Arial;
+	font-size: 13px;
+}
+
+.form-std .Tip .tipArrow {
+	position: relative;
+	display: block;
+	margin: 8px 0 0 1px;
+	width: 12px;
+	height: 16px;
+	background: url(../img/tip-arrow-left.png) no-repeat;
+}
+
+.form-std .Tip .tipContent {
+	position: relative;
+	top: -22px;
+	left: 13px;
+	background: #333333;
+	color: #FFF;
+	z-index: 3;
+	padding: .75em 1em .75em .95em;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	box-shadow: 2px 2px 8px #444;
+	-webkit-box-shadow: 2px 2px 8px #444;
+	white-space: nowrap;
+}
+
+.form-std .MultipleChoice .Tip {
+	margin-left: -12px;
+}
+
+.form-std .MultipleChoiceTip .tipArrow {
+	margin-top: 3px !important;
+}
+
+.form-std .MultipleChoiceTip .tipContent {
+	top: -23px !important;
+}
+
+/* Components */
+.form-std .form-comp {
+	padding: .25em 0.8em .5em .5em; /* overflow: hidden; */
+	margin-bottom: 3px;
+	border: 1px solid transparent; /* float: left; */ /* clear: both; */
+	border-radius: 5px;
+}
+
+.form-std .form-comp input {
+	font-family: Arial;
+	font-size: .8em;
+	padding: 3px 0em;
+	background: #EEEEEE url('../img/input-bg.gif') repeat-x 0 1px scroll;
+	border: 1px solid #AAA;
+}
+
+.form-std .form-comp textarea {
+	font-family: Arial;
+	font-size: .8em; /* padding: 3px .35em; */
+	background: url('../img/input-bg.gif') repeat-x 0 1px scroll #EEEEEE;
+	border: 1px solid #AAA; /* resize:none; */ /* margin: 0; */
+	padding: 0;
+}
+
+.form-std .Highlight {
+	background-color: #DFEFFF;
+	border: 1px solid #C2D7EF;
+}
+
+.form-std .ValidationFailed {
+	background-color: #FFDFE0;
+	border: 1px solid #EFC2C4;
+}
+
+/* Labels and Sublabels */
+.form-std .form-comp .Label {
+	display: block;
+	font-size: .8em;
+	font-weight: bold;
+}
+
+.form-std .form-comp .LabelRequiredStar {
+	color: #F00;
+}
+
+/* Component Type - SingleLineText */
+.form-std .SingleLineText input {
+	width: 100%;
+}
+
+/* Component Type - TextArea */
+.form-std .TextArea textarea {
+	width: 100%;
+	height: 12em;
+}
+
+/* Component Type - MultipleChoice */
+.form-std .MultipleChoice {
+	margin-top: 0px;
+	padding-bottom: 0.25em;
+}
+
+.form-std .MultipleChoice .choiceWrapper {
+	
+}
+
+.form-std .MultipleChoice .choice {
+	cursor: pointer;
+	margin: 0 .35em 0 0;
+}
+
+.form-std .MultipleChoice .choiceLabel {
+	font-size: .8em;
+	font-weight: normal;
+	margin-right: 1em;
+	cursor: pointer;
+}
+
+.form-std .MultipleChoiceTip {
+	z-index: 5;
+}
