@@ -21,21 +21,6 @@
 			$element.addClass("active");
 		})
 		
-		// animate submit button
-	    $(".form-std .Control input[type='submit']").click(function() {
-	        var bgp = $(this).css("background-position").split(" ");
-	        var posx = bgp[0];
-	        
-	        if (posx) {
-	            var x = parseInt(posx.replace("px", ""));
-
-	            bgp[0] = (x + 93) + "px";
-	            
-//	            $(this).css("background-position", bgp.join(" "))
-	            //$(this).attr("data-posx", x + 93);
-	        }
-	    })
-	    
 		// characters left counter
     	$("#post_comment").keypress(function (e) {
     		var n = Math.max(0,  250 - $(this).val().length );
