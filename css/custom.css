@@ -133,25 +133,23 @@ text-area,input,.preUrl {
 	padding: 0;
 	width: 93px;
 	height: 23px;
-	background: transparent url(../img/save_button0.png) repeat scroll;
-	background-position: left center;
+	background: transparent url(../img/win.png) repeat scroll;
+	background-position: left -7px;
 	border: 1px none #21A700;
 	border-radius: 2px;
-	-webkit-transition:background-position .8s ease-in;  
-    -moz-transition:background-position .8s ease-in;  
-    -o-transition:background-position .8s ease-in;  
-    transition:background-position .8s ease-out; 
+	-webkit-transition:background-position .2s ease-out;  
+    transition:background-position .2s ease-out; 
 
 }
 
 
 .form-std .Control input[type="submit"]:hover {
-	background-position: center 30px;
+	background-position: left 30px;
 	border-color: #2C8AEF;
 }
 
 .form-std .Control input[type="submit"]:active {
-	background-position: 20px 30px;
+	background-position: 6px 30px;
 	border-color: #7FBCFF;
 }
 
