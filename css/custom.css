@@ -88,8 +88,8 @@ body {
 	float: right;	
 }
 
-text-area,input,.preUrl {
-	font-size: 13px;
+textarea, input, .preUrl {
+	font-size: 14px;
 }
 
 #comLength {
@@ -160,7 +160,6 @@ text-area,input,.preUrl {
 	left: 0;
 	z-index: 3;
 	max-width: 400px;
-	font-family: Arial;
 	font-size: 13px;
 }
 
@@ -209,16 +208,12 @@ text-area,input,.preUrl {
 }
 
 .form-std .form-comp input {
-	font-family: Arial;
-	font-size: .8em;
 	padding: 3px 0em;
 	background: #EEEEEE url('../img/input-bg.gif') repeat-x 0 1px scroll;
 	border: 1px solid #AAA;
 }
 
 .form-std .form-comp textarea {
-	font-family: Arial;
-	font-size: .8em; /* padding: 3px .35em; */
 	background: url('../img/input-bg.gif') repeat-x 0 1px scroll #EEEEEE;
 	border: 1px solid #AAA; /* resize:none; */ /* margin: 0; */
 	padding: 0;
@@ -237,7 +232,6 @@ text-area,input,.preUrl {
 /* Labels and Sublabels */
 .form-std .form-comp .Label {
 	display: block;
-	font-size: .8em;
 	font-weight: bold;
 }
 
@@ -272,7 +266,6 @@ text-area,input,.preUrl {
 }
 
 .form-std .MultipleChoice .choiceLabel {
-	font-size: .8em;
 	font-weight: normal;
 	margin-right: 1em;
 	cursor: pointer;

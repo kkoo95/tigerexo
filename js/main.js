@@ -1,4 +1,15 @@
 (function($) {
+	function positionateError($element) {
+		$anchor = $element.parent();
+
+        if ($element.attr("type") == "checkbox")
+            anchor = $element.parent();
+
+		$element
+	        .css("left", $anchor.position().left + $anchor.outerWidth())
+	        .css("top", $anchor.position().top)
+	}
+	
     $(document).on('click.bs.collapse.data-api', function (e) {
         var $element = $(e.target)
         
@@ -13,6 +24,12 @@
             	.removeClass("not-collapsed")
     })
     
+    $(window).resize(function() {
+    	$("div[id$='-tip']").each(function () {
+	    	positionateError($(this));
+		})
+    });
+    
     $(document).ready(function() {
     	// activate link on click
 		$('.side a:not([data-toggle])').click(function (e) {
@@ -22,10 +39,13 @@
 		})
 		
 		// characters left counter
-    	$("#post_comment").keypress(function (e) {
+		var commentLengthWatcher = function() {
     		var n = Math.max(0,  250 - $(this).val().length );
 		  $('#comLength').text("Carateres restant: " + n)
-		})
+		}
+		
+	  	$("#post_comment").on('input', commentLengthWatcher);
+		$("#post_comment").on('keypress', commentLengthWatcher); //IE
 		
         // install form validation
         $("#edit_form").validate({
@@ -36,34 +56,20 @@
     
             highlight: function(element, errorClass) {
                 var comp = $(element.parentElement);
-                var $el = $(element);
-                var anchor = $el;
                 
                 comp.addClass("ValidationFailed");
                 comp.find("div[id$='-tip']").show();
                 
-                if ($el.attr("type") == "checkbox")
-                    anchor = $el.parent();
-                
-                $("#" + $el.attr("id") + "-tip")
-                    .css("left", anchor.position().left + anchor.outerWidth())
-                    .css("top", anchor.position().top)
+                positionateError($(element))
             },
     
             unhighlight: function(element, errorClass) {
                 var comp = $(element.parentElement);
-                var $el = $(element);
-                var anchor = $el;
                 
                 comp.removeClass("ValidationFailed");
                 comp.find("div[id$='-tip']").hide();
                 
-                if ($el.attr("type") == "checkbox")
-                    anchor = $el.parent();
-                
-                $("#" + $el.attr("id") + "-tip")
-                    .css("left", anchor.position().left + anchor.outerWidth())
-                    .css("top", anchor.position().top)
+                positionateError($(element))
             },
     
     		

@@ -129,5 +129,7 @@ app.util = app.util || {};
     })($.fn.validate);
     
 })(jQuery);
-        
+
+jQuery('input').placeholder();
+
 jQuery(document).loadExternalHTML();
